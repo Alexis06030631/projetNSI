@@ -1,0 +1,25 @@
+{
+    "name": "raspberriPi",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "node prod.js",
+        "dev": "nodemon ./index.js -e js,py",
+        "deploy": "rsync --recursive --exclude=node_modules ./ pi@alexis.local:/home/pi/projetNSI/"
+    },
+    "dependencies": {
+        "5x5_rgb_pimoroni": "^1.1.0",
+        "apa102-spi": "^0.0.6",
+        "i2c-bus": "^5.2.2",
+        "meteofrance_api": "^1.0.3",
+        "node-mcp23017": "^0.1.0",
+        "onoff": "^6.0.3",
+        "png-js": "^1.0.0",
+        "rpi-led-matrix": "^1.14.0",
+        "rpi-ws281x-native": "^1.0.4",
+        "scroll-controller": "^1.1.1",
+        "serialport": "^11.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.22"
+    }
+}
